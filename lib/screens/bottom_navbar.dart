@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
+import 'package:tickets_app/screens/homepage.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);
@@ -8,41 +10,52 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
+  int _selectedIindex = 0;
+
+  static final List<Widget> _widgetOptions = <Widget>[
+    const HomePage(),
+    const Text('Search'),
+    const Text('Tickets'),
+    const Text('Profile')
+  ];
+
+  void _onTappedItem(int index) {
+    setState(() {
+      _selectedIindex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blueAccent,
-        title: const Center(
-          child: Text(
-            'Tickets App',
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-          ),
-        ),
+      body: Center(
+        child: _widgetOptions[_selectedIindex],
       ),
-      body: const Center(child: Text('Testing')),
       bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _selectedIindex,
+          onTap: _onTappedItem,
           elevation: 10.0,
           showSelectedLabels: true,
-          showUnselectedLabels: true,
+          type: BottomNavigationBarType.fixed,
+          showUnselectedLabels: false,
           selectedItemColor: Colors.black,
-          unselectedItemColor: Colors.grey,
+          unselectedItemColor: Colors.blueGrey,
           items: const [
             BottomNavigationBarItem(
-                icon: Icon(Icons.home_mini_outlined),
-                activeIcon: Icon(Icons.home_filled),
+                icon: Icon(Iconsax.home),
+                activeIcon: Icon(Iconsax.home4),
                 label: 'Home'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.search_rounded),
-                activeIcon: Icon(Icons.search),
+                icon: Icon(Iconsax.search_normal),
+                activeIcon: Icon(Iconsax.search_favorite),
                 label: 'Search'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.airplane_ticket),
-                activeIcon: Icon(Icons.search),
+                icon: Icon(Iconsax.ticket_24),
+                activeIcon: Icon(Iconsax.ticket),
                 label: 'Tickets'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.person),
-                activeIcon: Icon(Icons.search),
+                icon: Icon(Iconsax.profile_add),
+                activeIcon: Icon(Icons.person),
                 label: 'Profile'),
           ]),
     );
