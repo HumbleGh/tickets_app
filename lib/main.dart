@@ -15,7 +15,8 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Tickets App',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          colorScheme: ColorScheme.fromSeed(
+              seedColor: const Color.fromARGB(255, 70, 3, 187)),
           useMaterial3: true,
         ),
         home: const BottomNavBar());
