@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:tickets_app/screens/homepage.dart';
+import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);
@@ -42,20 +42,20 @@ class _BottomNavBarState extends State<BottomNavBar> {
           unselectedItemColor: Colors.blueGrey,
           items: const [
             BottomNavigationBarItem(
-                icon: Icon(Iconsax.home),
-                activeIcon: Icon(Iconsax.home4),
+                icon: Icon(FluentIcons.home_32_regular),
+                activeIcon: Icon(FluentIcons.home_32_filled),
                 label: 'Home'),
             BottomNavigationBarItem(
-                icon: Icon(Iconsax.search_normal),
-                activeIcon: Icon(Iconsax.search_favorite),
+                icon: Icon(FluentIcons.search_32_regular),
+                activeIcon: Icon(FluentIcons.search_32_filled),
                 label: 'Search'),
             BottomNavigationBarItem(
-                icon: Icon(Iconsax.ticket_24),
-                activeIcon: Icon(Iconsax.ticket),
+                icon: Icon(FluentIcons.ticket_horizontal_24_regular),
+                activeIcon: Icon(FluentIcons.ticket_horizontal_24_filled),
                 label: 'Tickets'),
             BottomNavigationBarItem(
-                icon: Icon(Iconsax.profile_add),
-                activeIcon: Icon(Icons.person),
+                icon: Icon(FluentIcons.person_32_regular),
+                activeIcon: Icon(FluentIcons.person_32_filled),
                 label: 'Profile'),
           ]),
     );
