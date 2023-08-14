@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:tickets_app/screens/tickets_view.dart';
 import 'package:tickets_app/utils/app_style.dart';
 
 class HomePage extends StatefulWidget {
@@ -91,7 +92,8 @@ class _HomePageState extends State<HomePage> {
               )
             ],
           ),
-        )
+        ),
+        const TicketView(),
       ]),
     );
   }
