@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tickets_app/utils/app_layout.dart';
 import 'package:tickets_app/utils/app_style.dart';
+import 'package:tickets_app/widgets/thick_container.dart';
 
 class TicketView extends StatelessWidget {
   const TicketView({super.key});
@@ -29,7 +30,19 @@ class TicketView extends StatelessWidget {
                     Text('NYC',
                         style: Styles.headLineStyle3
                             .copyWith(color: Colors.white)),
-                    const Spacer(),
+                    Expanded(child: Container()),
+                    const ThickContainer(),
+                    Expanded(
+                        child: SizedBox(
+                      height: 24,
+                      child: Flex(
+                        direction: Axis.horizontal,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: List.generate(5, (index) => const Text('_')),
+                      ),
+                    )),
+                    const ThickContainer(),
+                    Expanded(child: Container()),
                     Text('London',
                         style:
                             Styles.headLineStyle3.copyWith(color: Colors.white))
