@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:iconsax/iconsax.dart';
+import 'package:tickets_app/screens/hotel_view.dart';
 import 'package:tickets_app/screens/tickets_view.dart';
 import 'package:tickets_app/utils/app_style.dart';
+import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -58,17 +59,19 @@ class _HomePageState extends State<HomePage> {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.white),
-                child: Row(
-                  children: [
-                    const Icon(Iconsax.search_normal),
-                    const SizedBox(
-                      width: 8.0,
-                    ),
-                    Text(
-                      'Search',
-                      style: Styles.headLineStyle4,
-                    )
-                  ],
+                child: Center(
+                  child: Row(
+                    children: [
+                      const Icon(FluentIcons.search_24_regular),
+                      const SizedBox(
+                        width: 8.0,
+                      ),
+                      Text(
+                        'Search',
+                        style: Styles.headLineStyle4,
+                      )
+                    ],
+                  ),
                 ),
               ),
               const SizedBox(
@@ -100,6 +103,8 @@ class _HomePageState extends State<HomePage> {
           child: Row(children: [
             TicketView(),
             TicketView(),
+            TicketView(),
+            TicketView(),
           ]),
         ),
         const Gap(10),
@@ -121,7 +126,9 @@ class _HomePageState extends State<HomePage> {
               )
             ],
           ),
-        )
+        ),
+        const Gap(20),
+        const HotelView()
       ]),
     );
   }
