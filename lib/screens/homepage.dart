@@ -128,7 +128,16 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         const Gap(20),
-        const HotelView()
+        const SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          padding: EdgeInsets.only(left: 20),
+          child: Row(children: [
+            HotelView(),
+            HotelView(),
+            HotelView(),
+          ]),
+        ),
+        const Gap(20)
       ]),
     );
   }
