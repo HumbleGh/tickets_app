@@ -93,7 +93,14 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-        const TicketView(),
+        const SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          padding: EdgeInsets.only(left: 20),
+          child: Row(children: [
+            TicketView(),
+            TicketView(),
+          ]),
+        ),
       ]),
     );
   }

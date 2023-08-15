@@ -35,18 +35,18 @@ class _BottomNavBarState extends State<BottomNavBar> {
           currentIndex: _selectedIindex,
           onTap: _onTappedItem,
           elevation: 10.0,
-          showSelectedLabels: true,
+          showSelectedLabels: false,
           type: BottomNavigationBarType.fixed,
           showUnselectedLabels: false,
           selectedItemColor: Colors.black,
           unselectedItemColor: Colors.blueGrey,
           items: const [
             BottomNavigationBarItem(
-                icon: Icon(FluentIcons.home_32_regular),
+                icon: Icon(FluentIcons.home_24_regular),
                 activeIcon: Icon(FluentIcons.home_32_filled),
                 label: 'Home'),
             BottomNavigationBarItem(
-                icon: Icon(FluentIcons.search_32_regular),
+                icon: Icon(FluentIcons.search_24_regular),
                 activeIcon: Icon(FluentIcons.search_32_filled),
                 label: 'Search'),
             BottomNavigationBarItem(
@@ -54,7 +54,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                 activeIcon: Icon(FluentIcons.ticket_horizontal_24_filled),
                 label: 'Tickets'),
             BottomNavigationBarItem(
-                icon: Icon(FluentIcons.person_32_regular),
+                icon: Icon(FluentIcons.person_24_regular),
                 activeIcon: Icon(FluentIcons.person_32_filled),
                 label: 'Profile'),
           ]),
