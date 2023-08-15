@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tickets_app/screens/tickets_view.dart';
 import 'package:tickets_app/utils/app_style.dart';
@@ -101,6 +102,26 @@ class _HomePageState extends State<HomePage> {
             TicketView(),
           ]),
         ),
+        const Gap(10),
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Hotels',
+                style: Styles.headLineStyle2,
+              ),
+              InkWell(
+                onTap: () {
+                  // print('you are tapped');
+                },
+                child: Text('View all',
+                    style: Styles.textStyle.copyWith(color: Styles.textColor)),
+              )
+            ],
+          ),
+        )
       ]),
     );
   }
