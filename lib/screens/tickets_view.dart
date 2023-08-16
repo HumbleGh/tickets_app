@@ -122,13 +122,13 @@ class TicketView extends StatelessWidget {
               color: Styles.orangeColor,
               child: Row(
                 children: [
-                  const SizedBox(
+                  SizedBox(
                     height: 20,
                     width: 10,
                     child: DecoratedBox(
                         decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.only(
+                            color: Styles.bgColor,
+                            borderRadius: const BorderRadius.only(
                                 topRight: Radius.circular(10),
                                 bottomRight: Radius.circular(10)))),
                   ),
@@ -158,13 +158,13 @@ class TicketView extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 20,
                     width: 10,
                     child: DecoratedBox(
                         decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.only(
+                            color: Styles.bgColor,
+                            borderRadius: const BorderRadius.only(
                                 topLeft: Radius.circular(10),
                                 bottomLeft: Radius.circular(10)))),
                   )
@@ -188,7 +188,7 @@ class TicketView extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            '1 MAY',
+                            ticket['date'],
                             style: Styles.headLineStyle3
                                 .copyWith(color: Colors.white),
                           ),
@@ -203,7 +203,7 @@ class TicketView extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            '08:00 AM',
+                            ticket['departure_time'],
                             style: Styles.headLineStyle3
                                 .copyWith(color: Colors.white),
                           ),
@@ -218,7 +218,7 @@ class TicketView extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           Text(
-                            '23 ',
+                            ticket['number'].toString(),
                             style: Styles.headLineStyle3
                                 .copyWith(color: Colors.white),
                           ),
