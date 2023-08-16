@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:tickets_app/screens/hotel_view.dart';
 import 'package:tickets_app/screens/tickets_view.dart';
+import 'package:tickets_app/utils/app_info_list.dart';
 import 'package:tickets_app/utils/app_style.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 
@@ -128,13 +129,13 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         const Gap(20),
-        const SingleChildScrollView(
+        SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-          padding: EdgeInsets.only(left: 20),
+          padding: const EdgeInsets.only(left: 20),
           child: Row(children: [
-            HotelView(),
-            HotelView(),
-            HotelView(),
+            ...hotelList
+                .map((singleHotel) => HotelView(hotel: singleHotel))
+                .toList(),
           ]),
         ),
         const Gap(20)
