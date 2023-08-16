@@ -5,7 +5,8 @@ import 'package:tickets_app/utils/app_style.dart';
 import 'package:tickets_app/widgets/thick_container.dart';
 
 class TicketView extends StatelessWidget {
-  const TicketView({super.key});
+  final Map<String, dynamic> ticket;
+  const TicketView({super.key, required this.ticket});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,7 @@ class TicketView extends StatelessWidget {
               child: Column(children: [
                 Row(
                   children: [
-                    Text('NYC',
+                    Text(ticket['from']['code'],
                         style: Styles.headLineStyle3
                             .copyWith(color: Colors.white)),
                     Expanded(child: Container()),
@@ -77,7 +78,7 @@ class TicketView extends StatelessWidget {
                     )),
                     const ThickContainer(),
                     Expanded(child: Container()),
-                    Text('LDN',
+                    Text(ticket['to']['code'],
                         style:
                             Styles.headLineStyle3.copyWith(color: Colors.white))
                   ],
@@ -89,20 +90,20 @@ class TicketView extends StatelessWidget {
                     SizedBox(
                       width: 100,
                       child: Text(
-                        'New-York',
+                        ticket['from']['name'],
                         style:
                             Styles.headLineStyle4.copyWith(color: Colors.white),
                       ),
                     ),
                     Text(
-                      '8H 30M',
+                      ticket['flying_time'],
                       style:
                           Styles.headLineStyle4.copyWith(color: Colors.white),
                     ),
                     SizedBox(
                       width: 100,
                       child: Text(
-                        'London',
+                        ticket['to']['name'],
                         textAlign: TextAlign.end,
                         style:
                             Styles.headLineStyle4.copyWith(color: Colors.white),

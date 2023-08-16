@@ -98,14 +98,13 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-        const SingleChildScrollView(
+        SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-          padding: EdgeInsets.only(left: 20),
+          padding: const EdgeInsets.only(left: 20),
           child: Row(children: [
-            TicketView(),
-            TicketView(),
-            TicketView(),
-            TicketView(),
+            ...ticketList
+                .map((singleTicket) => TicketView(ticket: singleTicket))
+                .toList(),
           ]),
         ),
         const Gap(10),
