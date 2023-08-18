@@ -70,10 +70,55 @@ class SearchScreen extends StatelessWidget {
             Gap(AppLayout.getHeight(25)),
             const AppIconText(
                 icon: Icons.flight_takeoff_rounded, text: 'Departure'),
-            Gap(AppLayout.getHeight(25)),
+            Gap(AppLayout.getHeight(20)),
             const AppIconText(icon: Icons.flight_land_rounded, text: 'Arival'),
             Gap(AppLayout.getHeight(25)),
-            const DoubleText(bigText: 'Upcoming Flights', smallText: 'View all')
+            Container(
+              padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(15)),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(AppLayout.getHeight(10)),
+                  color: Colors.blue),
+              child: Center(
+                child: Text(
+                  'Find Tickets',
+                  style: Styles.textStyle.copyWith(color: Colors.white),
+                ),
+              ),
+            ),
+            Gap(AppLayout.getHeight(25)),
+            const DoubleText(
+                bigText: 'Upcoming Flights', smallText: 'View all'),
+            Gap(AppLayout.getHeight(20)),
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    decoration: const BoxDecoration(
+                        color: Colors.white,
+                        image: DecorationImage(
+                            image: AssetImage(
+                              'assets/images/hotel1.jpg',
+                            ),
+                            fit: BoxFit.cover)),
+                  ),
+                  // Gap(AppLayout.getWidth(40)),
+                  Container(
+                    child: Column(
+                      children: [
+                        Container(
+                          child: Text('Fist container here'),
+                        ),
+                        Gap(AppLayout.getHeight(20)),
+                        Container(
+                          child: Text('Second container her'),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ));
   }
