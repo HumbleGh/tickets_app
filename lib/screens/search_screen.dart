@@ -3,6 +3,7 @@ import 'package:gap/gap.dart';
 import 'package:tickets_app/utils/app_layout.dart';
 import 'package:tickets_app/widgets/icon_text_widget.dart';
 import '../utils/app_style.dart';
+import '../widgets/double_text.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
@@ -43,7 +44,10 @@ class SearchScreen extends StatelessWidget {
                             borderRadius: BorderRadius.horizontal(
                                 left:
                                     Radius.circular(AppLayout.getHeight(20)))),
-                        child: const Center(child: Text('Airline Tickets')),
+                        child: Center(
+                            child: Text('Airline Tickets',
+                                style: Styles.headLineStyle4
+                                    .copyWith(color: const Color(0xFF3b3b3b)))),
                       ),
                       Container(
                         width: size.width * 0.44,
@@ -53,7 +57,12 @@ class SearchScreen extends StatelessWidget {
                             borderRadius: BorderRadius.horizontal(
                                 right:
                                     Radius.circular(AppLayout.getHeight(20)))),
-                        child: const Center(child: Text('Hotels')),
+                        child: Center(
+                            child: Text(
+                          'Hotels',
+                          style: Styles.headLineStyle4
+                              .copyWith(color: const Color(0xFF3b3b3b)),
+                        )),
                       )
                     ],
                   )),
@@ -63,6 +72,8 @@ class SearchScreen extends StatelessWidget {
                 icon: Icons.flight_takeoff_rounded, text: 'Departure'),
             Gap(AppLayout.getHeight(25)),
             const AppIconText(icon: Icons.flight_land_rounded, text: 'Arival'),
+            Gap(AppLayout.getHeight(25)),
+            const DoubleText(bigText: 'Upcoming Flights', smallText: 'View all')
           ],
         ));
   }

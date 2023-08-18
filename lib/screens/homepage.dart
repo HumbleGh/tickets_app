@@ -4,6 +4,7 @@ import 'package:tickets_app/screens/hotel_view.dart';
 import 'package:tickets_app/screens/tickets_view.dart';
 import 'package:tickets_app/utils/app_info_list.dart';
 import 'package:tickets_app/utils/app_style.dart';
+import '../widgets/double_text.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 
 class HomePage extends StatefulWidget {
@@ -78,23 +79,8 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(
                 height: 20.0,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Upcoming Flight',
-                    style: Styles.headLineStyle2,
-                  ),
-                  InkWell(
-                    onTap: () {
-                      // print('you are tapped');
-                    },
-                    child: Text('View all',
-                        style:
-                            Styles.textStyle.copyWith(color: Styles.textColor)),
-                  )
-                ],
-              )
+              const DoubleText(
+                  bigText: 'Upcoming Flights', smallText: 'View all'),
             ],
           ),
         ),
@@ -110,22 +96,7 @@ class _HomePageState extends State<HomePage> {
         const Gap(10),
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 15),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Hotels',
-                style: Styles.headLineStyle2,
-              ),
-              InkWell(
-                onTap: () {
-                  // print('you are tapped');
-                },
-                child: Text('View all',
-                    style: Styles.textStyle.copyWith(color: Styles.textColor)),
-              )
-            ],
-          ),
+          child: const DoubleText(bigText: 'Hotels', smallText: 'View all'),
         ),
         const Gap(20),
         SingleChildScrollView(
