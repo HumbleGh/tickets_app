@@ -13,9 +13,12 @@ class HotelView extends StatelessWidget {
     final size = AppLayout.getSize(context);
     return Container(
       width: size.width * 0.6,
-      height: 350,
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 17),
-      margin: const EdgeInsets.only(right: 17, top: 5),
+      height: AppLayout.getHeight(350),
+      padding: EdgeInsets.symmetric(
+          horizontal: AppLayout.getWidth(15),
+          vertical: AppLayout.getHeight(17)),
+      margin: EdgeInsets.only(
+          right: AppLayout.getHeight(17), top: AppLayout.getWidth(5)),
       decoration: BoxDecoration(boxShadow: [
         BoxShadow(color: Colors.grey.shade200, blurRadius: 50, spreadRadius: 5)
       ], color: Styles.primaryColor, borderRadius: BorderRadius.circular(24)),
@@ -23,9 +26,9 @@ class HotelView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            height: 180,
+            height: AppLayout.getHeight(180),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(AppLayout.getHeight(12)),
                 color: Styles.primaryColor,
                 image: DecorationImage(
                     image: AssetImage("assets/images/${hotel['image']}"),
