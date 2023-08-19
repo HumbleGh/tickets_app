@@ -89,35 +89,80 @@ class SearchScreen extends StatelessWidget {
             const DoubleText(
                 bigText: 'Upcoming Flights', smallText: 'View all'),
             Gap(AppLayout.getHeight(20)),
-            Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    decoration: const BoxDecoration(
-                        color: Colors.white,
-                        image: DecorationImage(
-                            image: AssetImage(
-                              'assets/images/hotel1.jpg',
-                            ),
-                            fit: BoxFit.cover)),
-                  ),
-                  // Gap(AppLayout.getWidth(40)),
-                  Container(
-                    child: Column(
-                      children: [
-                        Container(
-                          child: Text('Fist container here'),
-                        ),
-                        Gap(AppLayout.getHeight(20)),
-                        Container(
-                          child: Text('Second container her'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                      borderRadius:
+                          BorderRadius.circular(AppLayout.getHeight(10)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.shade200,
+                          blurRadius: 10,
+                          spreadRadius: 10,
                         )
                       ],
-                    ),
+                      color: Colors.white),
+                  padding: EdgeInsets.all(AppLayout.getHeight(12)),
+                  height: AppLayout.getHeight(400),
+                  width: size.width * 0.45,
+                  child: Column(
+                    children: [
+                      Container(
+                        height: AppLayout.getHeight(190),
+                        decoration: BoxDecoration(
+                            borderRadius:
+                                BorderRadius.circular(AppLayout.getHeight(6)),
+                            image: const DecorationImage(
+                              image: AssetImage('assets/images/hotel1.jpg'),
+                              fit: BoxFit.cover,
+                            )),
+                      ),
+                      Gap(AppLayout.getHeight(12)),
+                      Text(
+                        '20% Discount on all products, we have reduced to clear. Yeah, this is being done intentional for people to come and buy.',
+                        style: Styles.headLineStyle3,
+                      )
+                    ],
                   ),
-                ],
-              ),
+                ),
+                Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.symmetric(
+                          horizontal: AppLayout.getWidth(15),
+                          vertical: AppLayout.getHeight(15)),
+                      height: AppLayout.getHeight(190),
+                      width: size.width * 0.40,
+                      decoration: BoxDecoration(
+                          color: Colors.lightBlueAccent,
+                          borderRadius:
+                              BorderRadius.circular(AppLayout.getHeight(12))),
+                      child: Text(
+                          'Hey! Chale whatever you want to say biaa, edey your there man. Yeah!, I mean it ',
+                          style: Styles.headLineStyle3
+                              .copyWith(color: Colors.white)),
+                    ),
+                    Gap(AppLayout.getHeight(20)),
+                    Container(
+                      padding: EdgeInsets.symmetric(
+                          horizontal: AppLayout.getWidth(15),
+                          vertical: AppLayout.getHeight(15)),
+                      height: AppLayout.getHeight(190),
+                      width: size.width * 0.40,
+                      decoration: BoxDecoration(
+                          color: Colors.lightBlueAccent,
+                          borderRadius:
+                              BorderRadius.circular(AppLayout.getHeight(12))),
+                      child: Text(
+                          'Hey! Chale whatever you want to say biaa, edey your there man. Yeah!, I mean it ',
+                          style: Styles.headLineStyle3
+                              .copyWith(color: Colors.white)),
+                    )
+                  ],
+                ),
+              ],
             ),
           ],
         ));
