@@ -4,6 +4,7 @@ import 'package:tickets_app/utils/app_layout.dart';
 import 'package:tickets_app/widgets/icon_text_widget.dart';
 import '../utils/app_style.dart';
 import '../widgets/double_text.dart';
+import '../widgets/tickets_tabs.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
@@ -25,48 +26,8 @@ class SearchScreen extends StatelessWidget {
                   .copyWith(fontSize: AppLayout.getHeight(35)),
             ),
             Gap(AppLayout.getHeight(10)),
-            FittedBox(
-              child: Container(
-                  padding: EdgeInsets.all(AppLayout.getHeight(6)),
-                  decoration: BoxDecoration(
-                      color: const Color(0xFFF4F6FD),
-                      borderRadius:
-                          BorderRadius.circular(AppLayout.getHeight(50))),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        width: size.width * 0.44,
-                        padding: EdgeInsets.symmetric(
-                            vertical: AppLayout.getHeight(7)),
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.horizontal(
-                                left:
-                                    Radius.circular(AppLayout.getHeight(20)))),
-                        child: Center(
-                            child: Text('Airline Tickets',
-                                style: Styles.headLineStyle4
-                                    .copyWith(color: const Color(0xFF3b3b3b)))),
-                      ),
-                      Container(
-                        width: size.width * 0.44,
-                        padding: EdgeInsets.symmetric(
-                            vertical: AppLayout.getHeight(7)),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.horizontal(
-                                right:
-                                    Radius.circular(AppLayout.getHeight(20)))),
-                        child: Center(
-                            child: Text(
-                          'Hotels',
-                          style: Styles.headLineStyle4
-                              .copyWith(color: const Color(0xFF3b3b3b)),
-                        )),
-                      )
-                    ],
-                  )),
-            ),
+            const AppTicketTabs(
+                firstText: 'Airline Tickets', secondText: 'Hotels'),
             Gap(AppLayout.getHeight(25)),
             const AppIconText(
                 icon: Icons.flight_takeoff_rounded, text: 'Departure'),
