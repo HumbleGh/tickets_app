@@ -129,20 +129,36 @@ class SearchScreen extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Container(
-                      padding: EdgeInsets.symmetric(
-                          horizontal: AppLayout.getWidth(15),
-                          vertical: AppLayout.getHeight(15)),
-                      height: AppLayout.getHeight(190),
-                      width: size.width * 0.40,
-                      decoration: BoxDecoration(
-                          color: Colors.lightBlueAccent,
-                          borderRadius:
-                              BorderRadius.circular(AppLayout.getHeight(12))),
-                      child: Text(
-                          'Hey! Chale whatever you want to say biaa, edey your there man. Yeah!, I mean it ',
-                          style: Styles.headLineStyle3
-                              .copyWith(color: Colors.white)),
+                    Stack(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: AppLayout.getWidth(15),
+                              vertical: AppLayout.getHeight(15)),
+                          height: AppLayout.getHeight(190),
+                          width: size.width * 0.40,
+                          decoration: BoxDecoration(
+                              color: Colors.lightBlueAccent,
+                              borderRadius: BorderRadius.circular(
+                                  AppLayout.getHeight(12))),
+                          child: Text(
+                              'Hey! Chale whatever you want to say biaa, edey your there man. Yeah!, I mean it ',
+                              style: Styles.headLineStyle3
+                                  .copyWith(color: Colors.white)),
+                        ),
+                        Positioned(
+                          right: -45,
+                          top: -40,
+                          child: Container(
+                            padding: EdgeInsets.all(AppLayout.getHeight(30)),
+                            decoration: BoxDecoration(
+                                border: Border.all(
+                                    width: 18, color: Colors.lightBlue),
+                                shape: BoxShape.circle,
+                                color: Colors.transparent),
+                          ),
+                        )
+                      ],
                     ),
                     Gap(AppLayout.getHeight(20)),
                     Container(
