@@ -162,20 +162,34 @@ class SearchScreen extends StatelessWidget {
                     ),
                     Gap(AppLayout.getHeight(20)),
                     Container(
-                      padding: EdgeInsets.symmetric(
-                          horizontal: AppLayout.getWidth(15),
-                          vertical: AppLayout.getHeight(15)),
-                      height: AppLayout.getHeight(190),
-                      width: size.width * 0.40,
-                      decoration: BoxDecoration(
-                          color: Colors.lightBlueAccent,
-                          borderRadius:
-                              BorderRadius.circular(AppLayout.getHeight(12))),
-                      child: Text(
-                          'Hey! Chale whatever you want to say biaa, edey your there man. Yeah!, I mean it ',
-                          style: Styles.headLineStyle3
-                              .copyWith(color: Colors.white)),
-                    )
+                        padding: EdgeInsets.symmetric(
+                            horizontal: AppLayout.getWidth(15),
+                            vertical: AppLayout.getHeight(15)),
+                        height: AppLayout.getHeight(190),
+                        width: size.width * 0.40,
+                        decoration: BoxDecoration(
+                            color: Colors.lightBlueAccent,
+                            borderRadius:
+                                BorderRadius.circular(AppLayout.getHeight(12))),
+                        child: Column(
+                          children: [
+                            Text(
+                              'Take Love',
+                              style: Styles.headLineStyle2
+                                  .copyWith(color: Colors.white),
+                            ),
+                            Gap(AppLayout.getHeight(8)),
+                            RichText(
+                                text: const TextSpan(children: [
+                              TextSpan(
+                                  text: '😍', style: TextStyle(fontSize: 34)),
+                              TextSpan(
+                                  text: '🥰', style: TextStyle(fontSize: 38)),
+                              TextSpan(
+                                  text: '😘', style: TextStyle(fontSize: 34)),
+                            ]))
+                          ],
+                        ))
                   ],
                 ),
               ],
