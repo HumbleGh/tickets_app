@@ -39,7 +39,10 @@ class _TicketScreenState extends State<TicketScreen> {
                   Gap(AppLayout.getHeight(25)),
                   Container(
                     padding: EdgeInsets.only(left: AppLayout.getHeight(15)),
-                    child: TicketView(ticket: ticketList[0]),
+                    child: TicketView(
+                      ticket: ticketList[0],
+                      isColor: true,
+                    ),
                   )
                 ]),
           ],
