@@ -135,7 +135,7 @@ class TicketView extends StatelessWidget {
             */
 
             Container(
-              color: Styles.orangeColor,
+              color: isColor == null ? Styles.orangeColor : Colors.white,
               child: Row(
                 children: [
                   SizedBox(
