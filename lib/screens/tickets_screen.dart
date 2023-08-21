@@ -43,6 +43,30 @@ class _TicketScreenState extends State<TicketScreen> {
                       ticket: ticketList[0],
                       isColor: true,
                     ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.fromLTRB(16, 0, 16, 0),
+                    padding: EdgeInsets.symmetric(
+                        horizontal: AppLayout.getHeight(15)),
+                    color: Colors.white,
+                    child: Row(
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'First Text',
+                              style: Styles.headLineStyle3,
+                            ),
+                            Gap(AppLayout.getHeight(3)),
+                            Text(
+                              'Child text',
+                              style: Styles.headLineStyle4,
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   )
                 ]),
           ],
