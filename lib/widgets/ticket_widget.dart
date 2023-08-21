@@ -172,10 +172,8 @@ class TicketMain extends StatelessWidget {
             ),
             Container(
               decoration: BoxDecoration(
-                  color: isColor == null ? Styles.orangeColor : Colors.white,
-                  borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(AppLayout.getHeight(21)),
-                      bottomRight: Radius.circular(AppLayout.getHeight(21)))),
+                color: isColor == null ? Styles.orangeColor : Colors.white,
+              ),
               padding: EdgeInsets.only(
                   left: AppLayout.getHeight(16),
                   top: AppLayout.getWidth(10),
@@ -253,25 +251,78 @@ class TicketMain extends StatelessWidget {
                   vertical: AppLayout.getHeight(20),
                   horizontal: AppLayout.getWidth(20)),
               color: Colors.white,
-              child: Row(
+              child: Column(
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        'Hey',
-                        style: Styles.headLineStyle3,
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Humble',
+                            style: Styles.headLineStyle3,
+                          ),
+                          Gap(AppLayout.getHeight(2)),
+                          Text(
+                            'Flutter Dev',
+                            style: Styles.headLineStyle4,
+                          )
+                        ],
                       ),
-                      Gap(AppLayout.getHeight(2)),
-                      Text(
-                        'Yeah Man',
-                        style: Styles.headLineStyle3,
-                      )
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text(
+                            '0540977343',
+                            style: Styles.headLineStyle3,
+                          ),
+                          Gap(AppLayout.getHeight(2)),
+                          Text(
+                            'Phone Number',
+                            style: Styles.headLineStyle4,
+                          )
+                        ],
+                      ),
                     ],
-                  )
+                  ),
+                  Gap(AppLayout.getHeight(30)),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            '000766277276',
+                            style: Styles.headLineStyle3,
+                          ),
+                          Gap(AppLayout.getHeight(2)),
+                          Text(
+                            'E Flight Ticket',
+                            style: Styles.headLineStyle4,
+                          )
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text(
+                            '0E086A',
+                            style: Styles.headLineStyle3,
+                          ),
+                          Gap(AppLayout.getHeight(2)),
+                          Text(
+                            'Code',
+                            style: Styles.headLineStyle4,
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
