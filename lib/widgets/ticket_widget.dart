@@ -16,9 +16,9 @@ class TicketMain extends StatelessWidget {
 
     return SizedBox(
       width: size.width * 0.85,
-      height: AppLayout.getHeight(180),
+      // height: AppLayout.getHeight(180),
       child: Container(
-        margin: EdgeInsets.only(right: AppLayout.getHeight(16)),
+        margin: const EdgeInsets.fromLTRB(16, 0, 16, 0),
         child: Column(
           children: [
             /*
@@ -139,19 +139,6 @@ class TicketMain extends StatelessWidget {
               color: isColor == null ? Styles.orangeColor : Colors.white,
               child: Row(
                 children: [
-                  // SizedBox(
-                  //   height: AppLayout.getHeight(20),
-                  //   width: AppLayout.getWidth(10),
-                  //   child: DecoratedBox(
-                  //       decoration: BoxDecoration(
-                  //           color: Styles.bgColor,
-                  //           // borderRadius: const BorderRadius.only(
-                  //           //     topRight: Radius.circular(10),
-                  //           //     bottomRight: Radius.circular(10)
-                  //           //     )
-                  //               )
-                  //               ),
-                  // ),
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.all(12.0),
@@ -180,16 +167,6 @@ class TicketMain extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // SizedBox(
-                  //   height: AppLayout.getHeight(20),
-                  //   width: AppLayout.getWidth(10),
-                  //   child: DecoratedBox(
-                  //       decoration: BoxDecoration(
-                  //           color: Styles.bgColor,
-                  //           borderRadius: const BorderRadius.only(
-                  //               topLeft: Radius.circular(10),
-                  //               bottomLeft: Radius.circular(10)))),
-                  // )
                 ],
               ),
             ),
@@ -271,6 +248,30 @@ class TicketMain extends StatelessWidget {
                 ],
               ),
             ),
+            Container(
+              padding: EdgeInsets.symmetric(
+                  vertical: AppLayout.getHeight(20),
+                  horizontal: AppLayout.getWidth(20)),
+              color: Colors.white,
+              child: Row(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Hey',
+                        style: Styles.headLineStyle3,
+                      ),
+                      Gap(AppLayout.getHeight(2)),
+                      Text(
+                        'Yeah Man',
+                        style: Styles.headLineStyle3,
+                      )
+                    ],
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
