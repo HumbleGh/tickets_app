@@ -127,7 +127,8 @@ class TicketMain extends StatelessWidget {
                       ),
                     ),
                   ],
-                )
+                ),
+                Gap(AppLayout.getHeight(30)),
               ]),
             ),
 
@@ -320,6 +321,46 @@ class TicketMain extends StatelessWidget {
                       ),
                     ],
                   ),
+                  Gap(AppLayout.getHeight(30)),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Image.asset(
+                                'assets/images/visa.png',
+                                scale: 11,
+                              ),
+                              Text(
+                                ' *** 234',
+                                style: Styles.headLineStyle3,
+                              ),
+                            ],
+                          ),
+                          Text(
+                            'Payment Method',
+                            style: Styles.headLineStyle4,
+                          ),
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text(
+                            '\$30.99',
+                            style: Styles.headLineStyle3,
+                          ),
+                          Text(
+                            'Price',
+                            style: Styles.headLineStyle4,
+                          )
+                        ],
+                      )
+                    ],
+                  )
                 ],
               ),
             ),
