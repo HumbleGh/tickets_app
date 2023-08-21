@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
-import 'package:tickets_app/utils/app_layout.dart';
-import 'package:tickets_app/utils/app_style.dart';
 import 'package:tickets_app/widgets/thick_container.dart';
+import 'package:gap/gap.dart';
+import '../utils/app_layout.dart';
+import 'package:tickets_app/utils/app_style.dart';
 
-class TicketView extends StatelessWidget {
-  final bool? isColor;
+class TicketMain extends StatelessWidget {
   final Map<String, dynamic> ticket;
-  const TicketView({super.key, required this.ticket, this.isColor});
+
+  final bool? isColor;
+  const TicketMain({super.key, required this.isColor, required this.ticket});
 
   @override
   Widget build(BuildContext context) {
