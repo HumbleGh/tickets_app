@@ -82,7 +82,7 @@ class SearchScreen extends StatelessWidget {
                       ),
                       Gap(AppLayout.getHeight(12)),
                       Text(
-                        '20% Discount on all products, we have reduced to clear. Yeah, this is being done intentional for people to come and buy.',
+                        '20% Discount on all products, we have reduced to clear. Yeah, this is being done intentional.',
                         style: Styles.headLineStyle3,
                       )
                     ],
@@ -141,13 +141,19 @@ class SearchScreen extends StatelessWidget {
                             ),
                             Gap(AppLayout.getHeight(8)),
                             RichText(
-                                text: const TextSpan(children: [
+                                text: TextSpan(children: [
                               TextSpan(
-                                  text: '😍', style: TextStyle(fontSize: 34)),
+                                  text: '😍',
+                                  style: TextStyle(
+                                      fontSize: AppLayout.getHeight(28))),
                               TextSpan(
-                                  text: '🥰', style: TextStyle(fontSize: 38)),
+                                  text: '🥰',
+                                  style: TextStyle(
+                                      fontSize: AppLayout.getHeight(40))),
                               TextSpan(
-                                  text: '😘', style: TextStyle(fontSize: 34)),
+                                  text: '😘',
+                                  style: TextStyle(
+                                      fontSize: AppLayout.getHeight(28))),
                             ]))
                           ],
                         ))
