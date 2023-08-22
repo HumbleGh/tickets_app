@@ -1,3 +1,4 @@
+import 'package:barcode_widget/barcode_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:tickets_app/widgets/thick_container.dart';
 import 'package:gap/gap.dart';
@@ -360,7 +361,24 @@ class TicketMain extends StatelessWidget {
                         ],
                       )
                     ],
-                  )
+                  ),
+
+                  Gap(AppLayout.getHeight(30)),
+                  // The Barcode wideget is called here
+                  Container(
+                    decoration:
+                        BoxDecoration(borderRadius: BorderRadius.circular(12)),
+                    child: ClipRect(
+                      child: BarcodeWidget(
+                        data: 'https://github.com/martinovovo',
+                        barcode: Barcode.code128(),
+                        drawText: false,
+                        color: Styles.textColor,
+                        width: double.infinity,
+                        height: AppLayout.getHeight(70),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
