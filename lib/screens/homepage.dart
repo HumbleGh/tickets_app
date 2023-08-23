@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              Gap(AppLayout.getHeight(20)),
+              Gap(AppLayout.getHeight(22)),
               const DoubleText(
                   bigText: 'Upcoming Flights', smallText: 'View all'),
             ],
