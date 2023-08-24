@@ -43,6 +43,15 @@ class _TicketScreenState extends State<TicketScreen> {
                     child: TicketView(ticket: ticketList[0]),
                   )
                 ]),
+            Container(
+              padding: EdgeInsets.all(3),
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    width: 40,
+                    color: Colors.blue,
+                  )),
+            )
           ],
         ));
   }
