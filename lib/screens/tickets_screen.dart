@@ -44,7 +44,7 @@ class _TicketScreenState extends State<TicketScreen> {
                   )
                 ]),
             Container(
-              padding: EdgeInsets.all(3),
+              padding: EdgeInsets.all(AppLayout.getHeight(3)),
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   border: Border.all(
