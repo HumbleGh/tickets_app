@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
+import 'package:tickets_app/utils/app_layout.dart';
 import 'package:tickets_app/utils/app_style.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -12,13 +14,63 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: [
-          Text(
-            'Yo this is the profile page',
-            style: Styles.headLineStyle1,
-          )
-        ],
+      backgroundColor: Styles.bgColor,
+      body: SafeArea(
+        child: ListView(
+          children: [
+            Container(
+              padding: EdgeInsets.symmetric(
+                  horizontal: AppLayout.getHeight(16),
+                  vertical: AppLayout.getHeight(16)),
+              child: Row(
+                children: [
+                  Container(
+                    height: AppLayout.getHeight(80),
+                    width: AppLayout.getWidth(80),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius:
+                            BorderRadius.circular(AppLayout.getHeight(10)),
+                        image: const DecorationImage(
+                            image: AssetImage('assets/images/gh.jpg'),
+                            fit: BoxFit.cover)),
+                  ),
+                  Gap(AppLayout.getHeight(8)),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Book Tickets',
+                        style: Styles.headLineStyle1,
+                      ),
+                      Text(
+                        'New-York',
+                        style: Styles.headLineStyle4,
+                      ),
+                      Container(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: AppLayout.getHeight(6),
+                            vertical: AppLayout.getHeight(2)),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(4),
+                            color: Colors.white),
+                        child: const Row(
+                          children: [
+                            Icon(
+                              Icons.alt_route,
+                              size: 17,
+                            ),
+                            Text('Premium Status')
+                          ],
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
