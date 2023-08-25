@@ -147,10 +147,47 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       'Miles accrued',
                       style: Styles.headLineStyle3,
                     ),
-                    Text('25 August 2023', style: Styles.headLineStyle4),
+                    Text('25 August 2023', style: Styles.headLineStyle3),
                   ],
                 )),
-            Container()
+            Container(
+              padding: EdgeInsets.symmetric(
+                  horizontal: AppLayout.getHeight(20),
+                  vertical: AppLayout.getHeight(20)),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        '23 043',
+                        style: Styles.headLineStyle2,
+                      ),
+                      Text(
+                        'miles',
+                        style:
+                            Styles.headLineStyle3.copyWith(color: Colors.grey),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(
+                        'Emirate Airline',
+                        style: Styles.headLineStyle2,
+                      ),
+                      Text(
+                        'Received from',
+                        style:
+                            Styles.headLineStyle3.copyWith(color: Colors.grey),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
