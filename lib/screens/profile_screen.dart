@@ -1,3 +1,4 @@
+import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:tickets_app/utils/app_layout.dart';
@@ -61,9 +62,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         child: Row(
                           children: [
                             const Icon(
-                              Icons.alt_route,
+                              FluentIcons.shield_12_filled,
                               size: 17,
                             ),
+                            Gap(AppLayout.getHeight(4)),
                             Text(
                               'Premium Status',
                               style: Styles.headLineStyle3,
@@ -73,7 +75,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       )
                     ],
                   ),
-                  Gap(AppLayout.getHeight(80)),
+                  const Spacer(),
                   Column(
                     children: [
                       Text(
@@ -85,58 +87,24 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ],
               ),
             ),
-            Container(
-              padding: EdgeInsets.symmetric(
-                  horizontal: AppLayout.getWidth(20),
-                  vertical: AppLayout.getHeight(5)),
-              child: Stack(
-                children: [
-                  Container(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: AppLayout.getWidth(15),
-                        vertical: AppLayout.getHeight(15)),
-                    height: AppLayout.getHeight(100),
-                    // width: size.width * 0.40,
-                    decoration: BoxDecoration(
-                        color: Colors.lightBlueAccent,
-                        borderRadius:
-                            BorderRadius.circular(AppLayout.getHeight(12))),
-                    child: Text(
-                        'Hey! Chale whatever you want to say biaa, edey your there man. Yeah!, I mean it ',
-                        style: Styles.headLineStyle3
-                            .copyWith(color: Colors.white)),
-                  ),
-                  Positioned(
-                    right: -45,
-                    top: -40,
-                    child: Container(
-                      padding: EdgeInsets.all(AppLayout.getHeight(30)),
-                      decoration: BoxDecoration(
-                          border:
-                              Border.all(width: 18, color: Colors.lightBlue),
-                          shape: BoxShape.circle,
-                          color: Colors.transparent),
-                    ),
-                  )
-                ],
-              ),
-            ),
-            Gap(AppLayout.getHeight(40)),
-            Container(
-              padding:
-                  EdgeInsets.symmetric(horizontal: AppLayout.getHeight(20)),
-              child: Text(
-                'Accumumlated Miles',
-                style: Styles.headLineStyle2,
-              ),
-            ),
             Gap(AppLayout.getHeight(20)),
+            Center(
+              child: Container(
+                padding:
+                    EdgeInsets.symmetric(horizontal: AppLayout.getHeight(20)),
+                child: Text(
+                  'Accumumlated Miles',
+                  style: Styles.headLineStyle2,
+                ),
+              ),
+            ),
+            Gap(AppLayout.getHeight(8)),
             Center(
               child: Text('192642',
                   style: Styles.textStyle
                       .copyWith(fontWeight: FontWeight.bold, fontSize: 36)),
             ),
-            Gap(AppLayout.getHeight(40)),
+            Gap(AppLayout.getHeight(10)),
             Container(
                 padding:
                     EdgeInsets.symmetric(horizontal: AppLayout.getHeight(22)),
@@ -145,9 +113,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   children: [
                     Text(
                       'Miles accrued',
-                      style: Styles.headLineStyle3,
+                      style: Styles.headLineStyle3.copyWith(color: Colors.grey),
                     ),
-                    Text('25 August 2023', style: Styles.headLineStyle3),
+                    Text('25 August 2023',
+                        style:
+                            Styles.headLineStyle3.copyWith(color: Colors.grey)),
                   ],
                 )),
             Gap(AppLayout.getHeight(20)),
@@ -166,6 +136,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 firstRightText: 'New Townking',
                 secondLeftText: 'Miles',
                 secondRightText: 'Received from'),
+            Gap(AppLayout.getHeight(30)),
+            Center(
+                child: Text(
+              'How to get nore miles',
+              style: Styles.headLineStyle3.copyWith(color: Colors.grey),
+            )),
           ],
         ),
       ),
