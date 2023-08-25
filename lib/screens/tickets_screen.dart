@@ -48,9 +48,12 @@ class _TicketScreenState extends State<TicketScreen> {
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   border: Border.all(
-                    width: 40,
                     color: Colors.blue,
+                    width: 2,
                   )),
+              child: CircleAvatar(
+                maxRadius: AppLayout.getHeight(40),
+              ),
             )
           ],
         ));
