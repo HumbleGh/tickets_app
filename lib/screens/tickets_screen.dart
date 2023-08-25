@@ -43,18 +43,40 @@ class _TicketScreenState extends State<TicketScreen> {
                     child: TicketView(ticket: ticketList[0]),
                   )
                 ]),
-            Container(
-              padding: EdgeInsets.all(AppLayout.getHeight(3)),
-              decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(
-                    color: Colors.blue,
-                    width: 2,
-                  )),
-              child: CircleAvatar(
-                maxRadius: AppLayout.getHeight(40),
+            Positioned(
+              left: 22,
+              top: 400,
+              child: Container(
+                padding: EdgeInsets.all(AppLayout.getHeight(3)),
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 2,
+                    )),
+                child: CircleAvatar(
+                  backgroundColor: Colors.black,
+                  maxRadius: AppLayout.getHeight(5),
+                ),
               ),
-            )
+            ),
+            Positioned(
+              right: 22,
+              top: 400,
+              child: Container(
+                padding: EdgeInsets.all(AppLayout.getHeight(3)),
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 2,
+                    )),
+                child: CircleAvatar(
+                  backgroundColor: Colors.black,
+                  maxRadius: AppLayout.getHeight(5),
+                ),
+              ),
+            ),
           ],
         ));
   }

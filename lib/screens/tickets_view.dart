@@ -138,19 +138,16 @@ class TicketView extends StatelessWidget {
               color: isColor == null ? Styles.orangeColor : Colors.white,
               child: Row(
                 children: [
-                  // SizedBox(
-                  //   height: AppLayout.getHeight(20),
-                  //   width: AppLayout.getWidth(10),
-                  //   child: DecoratedBox(
-                  //       decoration: BoxDecoration(
-                  //           color: Styles.bgColor,
-                  //           // borderRadius: const BorderRadius.only(
-                  //           //     topRight: Radius.circular(10),
-                  //           //     bottomRight: Radius.circular(10)
-                  //           //     )
-                  //               )
-                  //               ),
-                  // ),
+                  SizedBox(
+                    height: AppLayout.getHeight(20),
+                    width: AppLayout.getWidth(10),
+                    child: DecoratedBox(
+                        decoration: BoxDecoration(
+                            color: Styles.bgColor,
+                            borderRadius: const BorderRadius.only(
+                                topRight: Radius.circular(10),
+                                bottomRight: Radius.circular(10)))),
+                  ),
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.all(12.0),
@@ -179,16 +176,16 @@ class TicketView extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // SizedBox(
-                  //   height: AppLayout.getHeight(20),
-                  //   width: AppLayout.getWidth(10),
-                  //   child: DecoratedBox(
-                  //       decoration: BoxDecoration(
-                  //           color: Styles.bgColor,
-                  //           borderRadius: const BorderRadius.only(
-                  //               topLeft: Radius.circular(10),
-                  //               bottomLeft: Radius.circular(10)))),
-                  // )
+                  SizedBox(
+                    height: AppLayout.getHeight(20),
+                    width: AppLayout.getWidth(10),
+                    child: DecoratedBox(
+                        decoration: BoxDecoration(
+                            color: Styles.bgColor,
+                            borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(10),
+                                bottomLeft: Radius.circular(10)))),
+                  )
                 ],
               ),
             ),
