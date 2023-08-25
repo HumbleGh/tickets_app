@@ -6,13 +6,13 @@ import '../utils/app_style.dart';
 class RowColumnText extends StatelessWidget {
   final String firstLeftText;
   final String secondLeftText;
-  final String firstrightText;
+  final String firstRightText;
   final String secondRightText;
 
   const RowColumnText(
       {super.key,
       required this.firstLeftText,
-      required this.firstrightText,
+      required this.firstRightText,
       required this.secondLeftText,
       required this.secondRightText});
 
@@ -21,7 +21,7 @@ class RowColumnText extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(
           horizontal: AppLayout.getHeight(20),
-          vertical: AppLayout.getHeight(20)),
+          vertical: AppLayout.getHeight(15)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -42,7 +42,7 @@ class RowColumnText extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Text(
-                firstrightText,
+                firstRightText,
                 style: Styles.headLineStyle2,
               ),
               Text(

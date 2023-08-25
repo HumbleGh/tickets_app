@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:tickets_app/utils/app_layout.dart';
 import 'package:tickets_app/utils/app_style.dart';
+import 'package:tickets_app/widgets/row_column_text.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -149,44 +150,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     Text('25 August 2023', style: Styles.headLineStyle3),
                   ],
                 )),
-            Container(
-              padding: EdgeInsets.symmetric(
-                  horizontal: AppLayout.getHeight(20),
-                  vertical: AppLayout.getHeight(20)),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        '23 043',
-                        style: Styles.headLineStyle2,
-                      ),
-                      Text(
-                        'miles',
-                        style:
-                            Styles.headLineStyle3.copyWith(color: Colors.grey),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Text(
-                        'Emirate Airline',
-                        style: Styles.headLineStyle2,
-                      ),
-                      Text(
-                        'Received from',
-                        style:
-                            Styles.headLineStyle3.copyWith(color: Colors.grey),
-                      ),
-                    ],
-                  )
-                ],
-              ),
-            )
+            Gap(AppLayout.getHeight(20)),
+            const RowColumnText(
+                firstLeftText: '29 097',
+                firstRightText: 'Emirates Airline',
+                secondLeftText: 'Miles',
+                secondRightText: 'Received from'),
+            const RowColumnText(
+                firstLeftText: '39',
+                firstRightText: 'Humbles Kitchen',
+                secondLeftText: 'Miles',
+                secondRightText: 'Received from'),
+            const RowColumnText(
+                firstLeftText: '54 980',
+                firstRightText: 'New Townking',
+                secondLeftText: 'Miles',
+                secondRightText: 'Received from'),
           ],
         ),
       ),
