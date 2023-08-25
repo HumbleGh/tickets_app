@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:tickets_app/utils/app_layout.dart';
 import 'package:tickets_app/utils/app_style.dart';
-import 'package:tickets_app/widgets/double_text.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
