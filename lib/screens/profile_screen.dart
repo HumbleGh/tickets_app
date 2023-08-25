@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:tickets_app/utils/app_layout.dart';
 import 'package:tickets_app/utils/app_style.dart';
+import 'package:tickets_app/widgets/double_text.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -120,6 +121,36 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ],
               ),
             ),
+            Gap(AppLayout.getHeight(40)),
+            Container(
+              padding:
+                  EdgeInsets.symmetric(horizontal: AppLayout.getHeight(20)),
+              child: Text(
+                'Accumumlated Miles',
+                style: Styles.headLineStyle2,
+              ),
+            ),
+            Gap(AppLayout.getHeight(20)),
+            Center(
+              child: Text('192642',
+                  style: Styles.textStyle
+                      .copyWith(fontWeight: FontWeight.bold, fontSize: 36)),
+            ),
+            Gap(AppLayout.getHeight(40)),
+            Container(
+                padding:
+                    EdgeInsets.symmetric(horizontal: AppLayout.getHeight(22)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Miles accrued',
+                      style: Styles.headLineStyle3,
+                    ),
+                    Text('25 August 2023', style: Styles.headLineStyle4),
+                  ],
+                )),
+            Container()
           ],
         ),
       ),
