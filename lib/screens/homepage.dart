@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> {
           padding: EdgeInsets.symmetric(horizontal: AppLayout.getWidth(20)),
           child: const DoubleText(bigText: 'Hotels', smallText: 'View all'),
         ),
-        const Gap(20),
+        Gap(AppLayout.getHeight(20)),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           padding: EdgeInsets.only(left: AppLayout.getHeight(20)),

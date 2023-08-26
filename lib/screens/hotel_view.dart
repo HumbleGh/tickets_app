@@ -34,12 +34,12 @@ class HotelView extends StatelessWidget {
                     image: AssetImage("assets/images/${hotel['image']}"),
                     fit: BoxFit.cover)),
           ),
-          const Gap(10),
+          Gap(AppLayout.getHeight(10)),
           Text(
             hotel['place'],
             style: Styles.headLineStyle2.copyWith(color: Styles.kakiColor),
           ),
-          const Gap(5),
+          Gap(AppLayout.getHeight(5)),
           Text(
             hotel['destination'],
             style: Styles.headLineStyle3.copyWith(color: Colors.white),
