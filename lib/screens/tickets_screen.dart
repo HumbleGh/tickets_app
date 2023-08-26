@@ -39,7 +39,7 @@ class _TicketScreenState extends State<TicketScreen> {
                   TicketMain(isColor: true, ticket: ticketList[0]),
                   Gap(AppLayout.getHeight(20)),
                   Padding(
-                    padding: const EdgeInsets.only(left: 20),
+                    padding: EdgeInsets.only(left: AppLayout.getHeight(20)),
                     child: TicketView(ticket: ticketList[0]),
                   )
                 ]),
