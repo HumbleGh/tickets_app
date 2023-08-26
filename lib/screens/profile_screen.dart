@@ -121,15 +121,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         size: AppLayout.getHeight(27),
                       ),
                     ),
+                    Gap(AppLayout.getHeight(8)),
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           'You\'ve got a new award',
-                          style: Styles.headLineStyle2,
+                          style: Styles.headLineStyle2.copyWith(
+                              color: Colors.white, fontWeight: FontWeight.w500),
                         ),
                         Text(
                           'You have 150 flights in a year',
-                          style: Styles.headLineStyle4,
+                          style: Styles.headLineStyle4
+                              .copyWith(color: Colors.white.withOpacity(0.90)),
                         ),
                       ],
                     )
