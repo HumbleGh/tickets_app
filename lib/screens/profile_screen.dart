@@ -95,7 +95,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   height: AppLayout.getHeight(90),
                   width: double.infinity,
                   decoration: BoxDecoration(
-                      color: Color(0xFF264CD2),
+                      color: const Color(0xFF264CD2),
                       borderRadius: BorderRadius.circular(12)),
                 ),
                 Positioned(
