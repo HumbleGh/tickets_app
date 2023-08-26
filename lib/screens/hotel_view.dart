@@ -44,7 +44,7 @@ class HotelView extends StatelessWidget {
             hotel['destination'],
             style: Styles.headLineStyle3.copyWith(color: Colors.white),
           ),
-          const Gap(8),
+          Gap(AppLayout.getHeight(8)),
           Text(
             "${hotel['price']}/Night",
             style: Styles.headLineStyle1.copyWith(color: Styles.kakiColor),
