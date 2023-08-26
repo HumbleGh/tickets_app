@@ -111,33 +111,41 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             Border.all(width: 18, color: Colors.blueAccent)),
                   ),
                 ),
-                Row(
-                  children: [
-                    CircleAvatar(
-                      maxRadius: AppLayout.getHeight(25),
-                      child: Icon(
-                        FluentIcons.lightbulb_20_filled,
-                        color: Colors.blue,
-                        size: AppLayout.getHeight(27),
+                Container(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: AppLayout.getHeight(16),
+                      vertical: AppLayout.getHeight(16)),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    // mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      CircleAvatar(
+                        maxRadius: AppLayout.getHeight(25),
+                        child: Icon(
+                          FluentIcons.lightbulb_20_filled,
+                          color: Colors.blue,
+                          size: AppLayout.getHeight(27),
+                        ),
                       ),
-                    ),
-                    Gap(AppLayout.getHeight(8)),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'You\'ve got a new award',
-                          style: Styles.headLineStyle2.copyWith(
-                              color: Colors.white, fontWeight: FontWeight.w500),
-                        ),
-                        Text(
-                          'You have 150 flights in a year',
-                          style: Styles.headLineStyle4
-                              .copyWith(color: Colors.white.withOpacity(0.90)),
-                        ),
-                      ],
-                    )
-                  ],
+                      Gap(AppLayout.getHeight(8)),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'You\'ve got a new award',
+                            style: Styles.headLineStyle2.copyWith(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500),
+                          ),
+                          Text(
+                            'You have 150 flights in a year',
+                            style: Styles.headLineStyle4.copyWith(
+                                color: Colors.white.withOpacity(0.90)),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
                 )
               ],
             ),
