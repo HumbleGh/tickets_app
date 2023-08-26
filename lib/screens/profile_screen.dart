@@ -21,11 +21,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
       backgroundColor: Styles.bgColor,
       body: SafeArea(
         child: ListView(
+          padding: EdgeInsets.symmetric(horizontal: AppLayout.getHeight(20)),
           children: [
             Container(
               padding: EdgeInsets.symmetric(
-                  horizontal: AppLayout.getHeight(20),
-                  vertical: AppLayout.getHeight(30)),
+                  // horizontal: AppLayout.getHeight(20),
+                  vertical: AppLayout.getHeight(20)),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -86,6 +87,55 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   )
                 ],
               ),
+            ),
+            Gap(AppLayout.getHeight(20)),
+            Stack(
+              children: [
+                Container(
+                  height: AppLayout.getHeight(90),
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      color: Colors.blueGrey,
+                      borderRadius: BorderRadius.circular(12)),
+                ),
+                Positioned(
+                  right: -40,
+                  top: -40,
+                  child: Container(
+                    padding: EdgeInsets.all(AppLayout.getHeight(30)),
+                    height: 90,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        // color: Colors.blue,
+                        border:
+                            Border.all(width: 18, color: Colors.blueAccent)),
+                  ),
+                ),
+                Row(
+                  children: [
+                    CircleAvatar(
+                      maxRadius: AppLayout.getHeight(25),
+                      child: Icon(
+                        FluentIcons.lightbulb_20_filled,
+                        color: Colors.blue,
+                        size: AppLayout.getHeight(27),
+                      ),
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          'You\'ve got a new award',
+                          style: Styles.headLineStyle2,
+                        ),
+                        Text(
+                          'You have 150 flights in a year',
+                          style: Styles.headLineStyle4,
+                        ),
+                      ],
+                    )
+                  ],
+                )
+              ],
             ),
             Gap(AppLayout.getHeight(20)),
             Center(
