@@ -49,7 +49,7 @@ class TicketMain extends StatelessWidget {
                         child: Stack(
                       children: [
                         SizedBox(
-                          height: AppLayout.getHeight(24),
+                          height: AppLayout.getHeight(22),
                           child: LayoutBuilder(
                             builder: (BuildContext context,
                                 BoxConstraints constraints) {
