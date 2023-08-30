@@ -2,12 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:tickets_app/utils/app_layout.dart';
 import 'package:tickets_app/utils/app_style.dart';
 
-class AppTicketTabs extends StatelessWidget {
+class AppTicketTabs extends StatefulWidget {
   final String firstText;
   final String secondText;
   const AppTicketTabs(
       {super.key, required this.firstText, required this.secondText});
 
+  @override
+  State<AppTicketTabs> createState() => _AppTicketTabsState();
+}
+
+class _AppTicketTabsState extends State<AppTicketTabs> {
   @override
   Widget build(BuildContext context) {
     final size = AppLayout.getSize(context);
@@ -29,7 +34,7 @@ class AppTicketTabs extends StatelessWidget {
                     borderRadius: BorderRadius.horizontal(
                         left: Radius.circular(AppLayout.getHeight(20)))),
                 child: Center(
-                    child: Text(firstText,
+                    child: Text(widget.firstText,
                         style: Styles.headLineStyle4
                             .copyWith(color: const Color(0xFF3b3b3b)))),
               ),
@@ -41,7 +46,7 @@ class AppTicketTabs extends StatelessWidget {
                         right: Radius.circular(AppLayout.getHeight(20)))),
                 child: Center(
                     child: Text(
-                  secondText,
+                  widget.secondText,
                   style: Styles.headLineStyle4
                       .copyWith(color: const Color(0xFF3b3b3b)),
                 )),
