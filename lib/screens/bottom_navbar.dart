@@ -4,6 +4,7 @@ import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:tickets_app/screens/profile_screen.dart';
 import 'package:tickets_app/screens/search_screen.dart';
 import 'package:tickets_app/screens/tickets_screen.dart';
+import 'package:tickets_app/widgets/tab_bar.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);
@@ -17,7 +18,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   static final List<Widget> _widgetOptions = <Widget>[
     const HomePage(),
-    const SearchScreen(),
+    const MyTabs(),
+    // const SearchScreen(),
     const TicketScreen(),
     const ProfileScreen()
   ];
