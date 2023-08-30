@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tickets_app/screens/homepage.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:tickets_app/screens/profile_screen.dart';
-import 'package:tickets_app/screens/search_screen.dart';
+// import 'package:tickets_app/screens/search_screen.dart';
 import 'package:tickets_app/screens/tickets_screen.dart';
 import 'package:tickets_app/widgets/tab_bar.dart';
 

@@ -35,8 +35,8 @@ class _MyTabsState extends State<MyTabs> {
                     child: Container(
                       decoration: BoxDecoration(
                         color: _currentIndex == 0
-                            ? Colors.white
-                            : Colors.grey[700],
+                            ? Colors.grey[700]
+                            : Colors.white,
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       padding: const EdgeInsets.all(8.0),
@@ -45,8 +45,8 @@ class _MyTabsState extends State<MyTabs> {
                           'First',
                           style: TextStyle(
                             color: _currentIndex == 0
-                                ? Colors.black
-                                : Colors.white,
+                                ? Colors.white
+                                : Colors.black,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -61,8 +61,8 @@ class _MyTabsState extends State<MyTabs> {
                     child: Container(
                       decoration: BoxDecoration(
                         color: _currentIndex == 1
-                            ? Colors.white
-                            : Colors.grey[700],
+                            ? Colors.grey[700]
+                            : Colors.white,
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       padding: const EdgeInsets.all(8.0),
@@ -71,8 +71,8 @@ class _MyTabsState extends State<MyTabs> {
                           'Second',
                           style: TextStyle(
                             color: _currentIndex == 1
-                                ? Colors.black
-                                : Colors.white,
+                                ? Colors.white
+                                : Colors.black,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
