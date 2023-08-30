@@ -6,9 +6,14 @@ import '../utils/app_style.dart';
 import '../widgets/double_text.dart';
 import '../widgets/tickets_tabs.dart';
 
-class SearchScreen extends StatelessWidget {
+class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
 
+  @override
+  State<SearchScreen> createState() => _SearchScreenState();
+}
+
+class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     final size = AppLayout.getSize(context);
