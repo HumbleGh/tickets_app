@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:tickets_app/utils/app_layout.dart';
 import 'package:tickets_app/widgets/icon_text_widget.dart';
-// import 'package:tickets_app/widgets/tab_bar.dart';
-// import 'package:tickets_app/widgets/tab_bar.dart';
 import '../utils/app_style.dart';
 import '../widgets/double_text.dart';
 import '../widgets/tickets_tabs.dart';
