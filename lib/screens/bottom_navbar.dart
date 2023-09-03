@@ -41,7 +41,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           currentIndex: _selectedIindex,
           onTap: _onTappedItem,
           elevation: 10.0,
-          showSelectedLabels: true,
+          showSelectedLabels: false,
           type: BottomNavigationBarType.fixed,
           showUnselectedLabels: true,
           selectedItemColor: Colors.black,
